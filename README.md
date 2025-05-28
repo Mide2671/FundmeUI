@@ -34,12 +34,12 @@ This dApp allows users to fund an Ethereum smart contract and lets the contract 
    git clone https://github.com/your-username/fundme-dapp.git
    cd fundme-dapp
    ```
-   2. **Install the dependeceis** 
-   ``` 
+2. **Install the dependeceis** 
+   ```bash
     npm install
    ```
-2. **Run the app** 
-   ```
+3. **Run the app** 
+   ```bash
    npm run dev
    ```
    🔌 Usage
