@@ -15,7 +15,9 @@ export default function App() {
   const [balance, setBalance] = useState("0");
   const [funders, setFunders] = useState([]);
 
-  const acc = currentAccount.slice(0, 3) + "xxxxxxxxxx" + currentAccount.slice(-6);
+  const maskedAccount = currentAccount
+    ? currentAccount.slice(0, 6) + "..." + currentAccount.slice(-4)
+    : null;
 
   async function connectWallet() {
     try {
@@ -123,7 +125,7 @@ export default function App() {
           onClick={connectWallet}
           className="bg-indigo-600 px-4 py-2 rounded-lg hover:bg-indigo-700 transition"
         >
-          {currentAccount ? acc : "Connect Wallet"}
+          {currentAccount ? maskedAccount : "Connect Wallet"}
         </button>
       </div>
 
